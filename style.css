@@ -1,0 +1,802 @@
+@charset "UTF-8";
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  color: var(--fc);
+}
+
+@font-face {
+  font-family: "hel";
+  src: url(./Fonts/NeueMetanaNext-SemiBold.otf);
+}
+@font-face {
+  font-family: "name";
+  src: url(./Fonts/5f6a68c6046cfa976287.woff2);
+}
+@font-face {
+  font-family: "del";
+  src: url(./Fonts/DxRestcal-Medium.otf);
+}
+@font-face {
+  font-family: "cardh3";
+  src: url(./Fonts/helveticaneuew01-45ligh.latin.woff2);
+}
+@font-face {
+  font-family: "par";
+  src: url(./Fonts/rijG6I_IOXJjsH07UEo2mw.woff2);
+}
+@font-face {
+  font-family: "intro";
+  src: url(./Fonts/rijG6I_IOXJjsH07UEo2mw.woff2);
+}
+:root {
+  --radial: radial-gradient(circle 40rem at 50% 10%, #79ABCC, #386786, #0b2d68, #011727);
+  --radialmob: radial-gradient(circle 25rem at 10% 0%, #79ABCC, #386786, #0b2d68, #011727);
+  --project: radial-gradient(circle 25rem at 0% 50%, #719ab6, #386786, #0b2d68, #011727);
+  --service: radial-gradient(circle 30rem at 100% 60%, #79ABCC, #386786, #0b2d68, #011727);
+  --servicetab: radial-gradient(circle 20rem at 100% 50%, #79ABCC, #386786, #0b2d68, #011727);
+  --fc: #C4CDD0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  background: var(--radialmob);
+  position: relative;
+}
+main header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  width: 100%;
+  padding: 1.4em 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main header h1 {
+  font-family: "hel";
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+main header .ri-menu-3-line {
+  font-size: 1.5em;
+}
+main header .nav {
+  display: none;
+  align-items: center;
+  gap: 1.7rem;
+}
+main header .nav li {
+  list-style-type: none;
+  font-family: "del";
+  font-size: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+main #hero {
+  width: 100%;
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2em;
+}
+main #hero .top {
+  width: 100%;
+}
+main #hero .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-wrap: nowrap;
+}
+main #hero .bot {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2.5em;
+}
+main #hero .bot .h_text {
+  width: 100%;
+  line-height: 1.4;
+}
+main #hero .bot .h_text h2 {
+  font-size: 3em;
+  font-family: "del";
+  text-align: center;
+}
+main #hero .bot .h_text h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  font-family: "name";
+  font-weight: 900;
+}
+main #hero .bot .h_text h3 {
+  width: 100%;
+  font-size: 1rem;
+  font-family: "par";
+  font-weight: 100;
+  text-align: center;
+  letter-spacing: 1.8px;
+  line-height: 1.2;
+}
+main #hero .bot .act {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding-top: 3.9em;
+}
+main #hero .bot .act .ri-arrow-down-line {
+  position: absolute;
+  bottom: 0;
+  padding: 0.3em;
+  border-radius: 20%;
+  font-size: 1.5em;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background-color: rgba(196, 205, 208, 0.0745098039);
+  color: #79ABCC;
+}
+main #project {
+  width: 100%;
+  padding: 1.5rem;
+  gap: 2.8rem;
+  background: var(--project);
+}
+main #project h2 {
+  margin-top: 2%;
+  font-size: 5em;
+  font-family: "del";
+  text-align: left;
+  width: 70%;
+}
+main #project .cards {
+  margin-top: 5%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.6em;
+}
+main #project .cards .card {
+  border-radius: 10px;
+  padding: 0.7em;
+  aspect-ratio: 1.43;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5em;
+}
+main #project .cards .card video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  background: url(https://nileshnaik06.github.io/My-first-project/);
+}
+main #project .cards .card h3 {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "intro";
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 2px;
+}
+main #service {
+  width: 100%;
+  padding: 1.5rem;
+  gap: 2.8rem;
+  background: var(--service);
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  flex-direction: column;
+}
+main #service .ser_head {
+  font-size: 5em;
+  font-family: "del";
+  text-align: left;
+  width: 70%;
+}
+main #service .ser-top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+main #service .ser-top .s_text {
+  font-size: 0.66em;
+  font-family: "intro";
+  font-weight: 500;
+  text-align: center;
+}
+main #service .servCards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2.6em;
+}
+main #service .servs {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  gap: 0.6em;
+  transition: box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+main #service .servs h2 {
+  font-family: "intro";
+  font-size: 2em;
+  font-weight: 800;
+}
+main #service .servs h4 {
+  font-family: "par";
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.88em;
+}
+main #service .servs:hover {
+  box-shadow: 0px 0px 30px rgba(239, 161, 255, 0.7);
+}
+main #service .ser_tex {
+  text-align: start;
+  font-size: 4em;
+  font-family: "del";
+  text-align: left;
+  width: 90%;
+}
+main #service .ser-bot {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: column;
+}
+main #service .left {
+  width: 100%;
+}
+main #service .left h1 {
+  font-family: "intro";
+  font-size: 1.3em;
+  text-align: center;
+}
+main #service .left h1 span {
+  font-family: "name";
+  font-size: 1.7em;
+}
+main #service .left h3 {
+  font-family: "par";
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: center;
+}
+main #service .left h3 span {
+  text-align: center;
+  font-weight: 600;
+  font-family: "intro";
+  font-size: 1.1em;
+}
+main #service .right {
+  width: 100%;
+}
+main #service .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #service .skill {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+main #service .skill h2 {
+  font-size: 2.7em;
+  font-family: "name";
+  text-align: left;
+  width: 40%;
+}
+main #service .center {
+  margin-top: 6%;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+}
+main #service .center h4 {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 1em;
+  font-family: "par";
+  transition: all 0.5s ease;
+}
+main #service .center h4:hover {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+main #service .center::before,
+main #service .center::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 10%;
+  z-index: 2;
+}
+main #service .center::before {
+  left: 0;
+  background: linear-gradient(to left, transparent, #011727);
+}
+main #service .center::after {
+  right: 0;
+  background: linear-gradient(to right, transparent, #011727);
+}
+main #service .center::-webkit-scrollbar {
+  display: none;
+}
+main #service .roller {
+  white-space: nowrap;
+  display: inline-block;
+  animation: 8s slide linear infinite;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+main #contact {
+  width: 100%;
+  padding: 1.5rem;
+  gap: 2.8rem;
+  display: flex;
+  background: linear-gradient(#011727, #1b2049, #0e0e0e);
+  justify-content: space-between;
+  gap: 2em;
+  flex-direction: column;
+}
+main #contact h1 {
+  font-size: 5em;
+  font-family: "del";
+  text-align: left;
+}
+main #contact .con-top {
+  width: 100%;
+}
+main #contact .con-top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #contact .con-bot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 1em;
+}
+main #contact .con-bot h2 {
+  font-family: "intro";
+  font-size: 1em;
+  font-weight: 500;
+}
+main #contact .con-bot h2 span {
+  background: linear-gradient(90deg, #FF4D6D, #FF9A3C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+main #contact .con-bot .con_form {
+  width: 100%;
+}
+main #contact .con-bot .con_form form {
+  width: 100%;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 0px 4px rgba(255, 253, 253, 0.2) inset;
+}
+main #contact .con-bot .con_form form label {
+  display: block;
+  font-family: "par";
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+main #contact .con-bot .con_form form input,
+main #contact .con-bot .con_form form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.363);
+  border-radius: 5px;
+  font-size: 1rem;
+  background: transparent;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+main #contact .con-bot .con_form form input::-moz-placeholder, main #contact .con-bot .con_form form textarea::-moz-placeholder {
+  color: var(--fc);
+}
+main #contact .con-bot .con_form form input::placeholder,
+main #contact .con-bot .con_form form textarea::placeholder {
+  color: var(--fc);
+}
+main #contact .con-bot .con_form form input:focus,
+main #contact .con-bot .con_form form textarea:focus {
+  box-shadow: 0px 0px 8px rgba(255, 254, 254, 0.308);
+}
+main #contact .con-bot .con_form form textarea {
+  height: 100px;
+  resize: none;
+}
+main #contact .con-bot .con_form form button {
+  width: 100%;
+  padding: 0.1em;
+  border: 1px solid white;
+  background-color: transparent;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  font-family: "par";
+  font-size: 1.3em;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+main #contact .con-bot .con_form form button:hover {
+  box-shadow: 0px 0px 8px rgb(215, 178, 240);
+}
+main #footer {
+  width: 100%;
+  padding: 1.5rem;
+  gap: 2.8rem;
+  display: flex;
+  background-color: #0e0e0e;
+  justify-content: space-between;
+  gap: 2em;
+  font-family: "name";
+}
+main #footer .navi {
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+  gap: 0.7em;
+  flex-direction: column;
+}
+main #footer .navi li {
+  list-style-type: none;
+  font-family: "par";
+}
+main #footer .conn h2 {
+  margin-bottom: 1em;
+}
+main #footer .conn i {
+  padding-right: 1em;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #0a0a0a;
+  padding: 1em;
+}
+footer h3 {
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  font-family: "intro";
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 100%;
+  }
+  main header {
+    padding: 1rem 2.5rem;
+  }
+  main header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  main header .ri-menu-3-line {
+    display: none;
+  }
+  main #hero {
+    padding: 1rem 2.5rem;
+    min-height: 70vh;
+    flex-direction: row-reverse;
+  }
+  main #hero .top {
+    width: 50%;
+  }
+  main #hero .bot {
+    width: 50%;
+  }
+  main #hero .bot .h_text {
+    width: 100%;
+  }
+  main #hero .bot .h_text h2 {
+    font-size: 3.6em;
+    font-family: "del";
+    text-align: start;
+  }
+  main #hero .bot .h_text h1 {
+    text-align: start;
+    font-size: 4.3em;
+    font-family: "name";
+  }
+  main #hero .bot .h_text h3 {
+    font-size: 0.77em;
+    font-weight: 300;
+    text-align: start;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+  main #hero .bot .act {
+    justify-content: flex-start;
+  }
+  main #project {
+    padding: 1rem 2.5rem;
+    margin-top: 4rem;
+  }
+  main #project h2 {
+    width: 40%;
+  }
+  main #project .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  main #project .cards .card {
+    width: 90%;
+    /* Adjusts width for tablets */
+    padding: 1em;
+  }
+  main #project .cards .card video {
+    width: 100%;
+    height: 100%;
+  }
+  main #service {
+    padding: 1rem 2.5rem;
+    width: 100%;
+    background: var(--servicetab);
+    /* 🌟 Responsive Styles for Tablet Screens (768px - 1024px) */
+    /* Adjust fade effect to fit smaller screens */
+  }
+  main #service .ser_head {
+    border: none;
+  }
+  main #service .ser-top .servCards {
+    flex-direction: row;
+  }
+  main #service .ser-top .s_text {
+    font-size: 0.8em;
+  }
+  main #service .ser_tex {
+    width: 30%;
+  }
+  main #service .ser-bot {
+    flex-direction: row;
+    gap: 1em;
+  }
+  main #service .ser-bot .left {
+    width: 55%;
+  }
+  main #service .ser-bot .left h1 {
+    text-align: start;
+  }
+  main #service .ser-bot .left h3 {
+    text-align: start;
+  }
+  main #service .ser-bot .left h3 span {
+    font-size: 1.33em;
+  }
+  main #service .ser-bot .right {
+    width: 45%;
+  }
+  main #service .skill h2 {
+    border: none;
+  }
+  main #service .center {
+    margin-top: 4%;
+  }
+  main #service .roller {
+    animation: slide 12s linear-infinite;
+    /* Slower animation for better readability */
+  }
+  main #service .center h4 {
+    font-size: clamp(1em, 2vw, 1.2em);
+    /* Responsive font size */
+  }
+  main #service .center::before,
+  main #service .center::after {
+    width: 15%;
+    /* Slightly larger fade area */
+  }
+  main #contact {
+    padding: 1rem 2.5rem;
+    width: 100%;
+  }
+  main #contact .con_head {
+    border: none;
+  }
+  main #contact .context {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  main #contact .context .con-top {
+    width: 50%;
+  }
+  main #contact .context .con-top img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main #contact .context .con-bot {
+    width: 50%;
+    margin-bottom: 5%;
+  }
+  main #footer {
+    gap: 1rem;
+    padding: 3rem;
+  }
+  main #footer .conn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 0.5em;
+  }
+  main #footer .conn i {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  main #footer .conn i h4 {
+    font-family: "intro";
+    font-weight: 500;
+  }
+}
+@media (min-width: 1024px) {
+  main {
+    width: 100%;
+  }
+  main header {
+    width: 100%;
+    padding: 0.9rem 3.9rem;
+  }
+  main #hero {
+    width: 100%;
+    padding: 0.9rem 3.9rem;
+    min-height: 90vh;
+  }
+  main #hero .top {
+    width: 50%;
+    height: 100%;
+  }
+  main #hero .bot {
+    height: 100%;
+    width: 50%;
+    justify-content: space-between;
+  }
+  main #hero .bot .h_text {
+    width: 90%;
+  }
+  main #hero .bot .h_text h2 {
+    font-size: 6vw;
+  }
+  main #hero .bot .h_text h1 {
+    font-size: 8vw;
+  }
+  main #hero .bot .h_text h3 {
+    font-size: 1.6vw;
+    font-weight: 200;
+  }
+  main #hero .bot .act {
+    margin-top: 10%;
+  }
+  main #project {
+    margin-top: 0%;
+    padding: 0.9rem 3.9rem;
+  }
+  main #project .cards {
+    flex-wrap: wrap;
+    /* Allow cards to wrap to the next row */
+    flex-direction: row;
+    justify-content: center;
+    /* Center align the cards */
+    gap: 2.6em;
+    /* Adjust spacing between cards */
+  }
+  main #project .card {
+    width: 40% !important;
+  }
+  main #project .card video {
+    width: 100%;
+  }
+  main #service {
+    padding: 0.9rem 3.9rem;
+  }
+  main #service .ser-top .servCards {
+    justify-content: space-around;
+  }
+  main #service .ser-top .servCards .servs {
+    width: 20vw;
+    gap: 0.8rem;
+    aspect-ratio: 1;
+    padding: 1.5rem;
+  }
+  main #service .ser-top .servCards .servs h2 {
+    width: 100%;
+    font-size: 2.1vw;
+    width: 100%;
+  }
+  main #service .ser-top .servCards .servs h4 {
+    font-weight: 200;
+    font-size: 0.8rem;
+  }
+  main #service .ser-top .s_text {
+    width: 90%;
+    font-size: 1.3vw;
+  }
+  main #service .ser-bot {
+    width: 100%;
+  }
+  main #service .ser-bot .left {
+    width: 50%;
+    height: 100%;
+    margin-top: 10%;
+  }
+  main #service .ser-bot .right {
+    width: 505;
+  }
+  main #contact {
+    padding: 0.9rem 3.9rem;
+  }
+}/*# sourceMappingURL=style.css.map */
